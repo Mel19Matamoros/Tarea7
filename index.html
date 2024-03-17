@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadoras</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calculator">
+    <h2>Calculadora de Conversión de Temperatura</h2>
+    <input type="number" id="celsius" placeholder="Ingrese temperatura en Celsius">
+    <button onclick="convertToCelsius()">Convertir a Fahrenheit</button>
+    <button onclick="convertToKelvin()">Convertir a Kelvin</button>
+    <div id="temperatureResult"></div>
+  </div>
+
+  <div class="calculator">
+    <h2>Calculadora de Conversión de Distancia</h2>
+    <input type="number" id="kilometers" placeholder="Ingrese distancia en kilómetros">
+    <button onclick="convertToMiles()">Convertir a Millas</button>
+    <button onclick="convertToMeters()">Convertir a Metros</button>
+    <div id="distanceResult"></div>
+  </div>
+
+  <div class="calculator">
+    <h2>Calculadora de Índice de Masa Corporal (IMC)</h2>
+    <input type="number" id="weight" placeholder="Ingrese su peso en kg">
+    <input type="number" id="height-meters" placeholder="Metros">
+    <input type="number" id="height-centimeters" placeholder="Centímetros">
+    <button onclick="calculateBMI()">Calcular IMC</button>
+    <div id="bmiResult"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
