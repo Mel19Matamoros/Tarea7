@@ -4,32 +4,102 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadoras</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="calculator">
     <h2>Calculadora de Conversión de Temperatura</h2>
-    <input type="number" id="celsius" placeholder="Ingrese temperatura en Celsius">
-    <button onclick="convertToCelsius()">Convertir a Fahrenheit</button>
-    <button onclick="convertToKelvin()">Convertir a Kelvin</button>
-    <div id="temperatureResult"></div>
-  </div>
+    <div class="input-container">
+      <input type="number" id="celsius" class="display" placeholder="Ingrese temperatura en Celsius">
+      <div id="temperatureResult" class="result"></div>
+    </div>
+    <div class="keys">
+      <div class="row">
+        <button onclick="appendToDisplay(7)">7</button>
+        <button onclick="appendToDisplay(8)">8</button>
+        <button onclick="appendToDisplay(9)">9</button>
+        <button class="operator" onclick="clearDisplay()">C</button>
+      </div>
+      <div class="row">
+        <button onclick="appendToDisplay(4)">4</button>
+        <button onclick="appendToDisplay(5)">5</button>
+        <button onclick="appendToDisplay(6)">6</button>
+        <button class="operator" onclick="deleteLast()">DEL</button>
+      </div>
+      <div class="row">
+        <button onclick="appendToDisplay(1)">1</button>
+        <button onclick="appendToDisplay(2)">2</button>
+        <button onclick="appendToDisplay(3)">3</button>
+      </div>
+      <div class="row">
+        <button onclick="appendToDisplay(0)">0</button>
+        <button class="operator" onclick="convertToCelsius()">°C a °F</button>
+        <button class="operator" onclick="convertToKelvin()">°C a K</button>
+      </div>
+    </div>
+  </div> 
 
   <div class="calculator">
     <h2>Calculadora de Conversión de Distancia</h2>
-    <input type="number" id="kilometers" placeholder="Ingrese distancia en kilómetros">
-    <button onclick="convertToMiles()">Convertir a Millas</button>
-    <button onclick="convertToMeters()">Convertir a Metros</button>
-    <div id="distanceResult"></div>
+    <div class="input-container">
+      <input type="number" id="kilometers" class="display" placeholder="Ingrese distancia en kilómetros">
+      <div id="distanceResult" class="result"></div>
+    </div>
+    <div class="keys">
+      <div class="row">
+        <button onclick="appendToDispla('1')">1</button>
+        <button onclick="appendToDispla('2')">2</button>
+        <button onclick="appendToDispla('3')">3</button>
+        <button class="operator" onclick="clearDispla()">C</button>
+      </div>
+      <div class="row">
+        <button onclick="appendToDispla('4')">4</button>
+        <button onclick="appendToDispla('5')">5</button>
+        <button onclick="appendToDispla('6')">6</button>
+        <button class="operator" onclick="deleteLas()">DEL</button>
+      </div>
+      <div class="row">
+        <button onclick="appendToDispla('7')">7</button>
+        <button onclick="appendToDispla('8')">8</button>
+        <button onclick="appendToDispla('9')">9</button>
+      </div>
+      <div class="row">
+        <button onclick="appendToDispla('0')">0</button>
+        <button class="operator" onclick="convertToMiles()">Convertir a Millas</button>
+        <button class="operator" onclick="convertToMeters()">Convertir a Metros</button>
+      </div>
+    </div>
   </div>
 
   <div class="calculator">
     <h2>Calculadora de Índice de Masa Corporal (IMC)</h2>
-    <input type="number" id="weight" placeholder="Ingrese su peso en kg">
-    <input type="number" id="height-meters" placeholder="Metros">
-    <input type="number" id="height-centimeters" placeholder="Centímetros">
-    <button onclick="calculateBMI()">Calcular IMC</button>
-    <div id="bmiResult"></div>
+    <input type="number" id="weight" class="display" placeholder="Ingrese su peso en kg" onfocus="activeInput = this">
+    <input type="number" id="height-meters" class="display" placeholder="Metros" onfocus="activeInput = this">
+    <input type="number" id="height-centimeters" class="display" placeholder="Centímetros" onfocus="activeInput = this">
+    <div id="bmiResult" class="result"></div>
+    <div class="keys">
+      <div class="row">
+        <button onclick="appendToDispl('1')">1</button>
+        <button onclick="appendToDispl('2')">2</button>
+        <button onclick="appendToDispl('3')">3</button>
+        <button class="operator" onclick="clearDispl()">C</button>
+      </div>
+      <div class="row">
+        <button onclick="appendToDispl('4')">4</button>
+        <button onclick="appendToDispl('5')">5</button>
+        <button onclick="appendToDispl('6')">6</button>
+        <button class="operator" onclick="deleteLa()">DEL</button>
+      </div>
+      <div class="row">
+        <button onclick="appendToDispl('7')">7</button>
+        <button onclick="appendToDispl('8')">8</button>
+        <button onclick="appendToDispl('9')">9</button>
+      </div>
+      <div class="row">
+        <button onclick="appendToDispl('0')">0</button>
+        <button class="operator" onclick="calculateBMI()">Calcular IMC</button>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
