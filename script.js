@@ -1,3 +1,53 @@
+function appendToDisplay(value) {
+  document.getElementById('celsius').value += value;
+}
+
+function clearDisplay() {
+  document.getElementById('celsius').value = '';
+  document.getElementById('temperatureResult').innerText = ''; // Limpiar el contenido de temperatureResult
+}
+
+function deleteLast() {
+  const currentValue = document.getElementById('celsius').value;
+  document.getElementById('celsius').value = currentValue.slice(0, -1);
+}
+
+function appendToDispla(value) {
+  document.getElementById('kilometers').value += value;
+}
+
+function clearDispla() {
+  document.getElementById('kilometers').value = '';
+  document.getElementById('distanceResult').innerText = ''; // Limpiar el contenido de temperatureResult
+}
+
+function deleteLas() {
+  const currentValue = document.getElementById('kilometers').value;
+  document.getElementById('kilometers').value = currentValue.slice(0, -1);
+}
+
+let activeInput; // Variable global para almacenar el cuadro de entrada activo
+
+function appendToDispl(value) {
+  if (activeInput) {
+    activeInput.value += value;
+  }
+}
+
+function clearDispl() {
+  document.getElementById('weight').value = '';
+  document.getElementById('height-meters').value = '';
+  document.getElementById('height-centimeters').value = '';
+  document.getElementById('bmiResult').innerText = ''; // Limpiar el contenido de temperatureResult
+}
+
+function deleteLa() {
+  if (activeInput) {
+    const currentValue = activeInput.value;
+    activeInput.value = currentValue.slice(0, -1);
+  }
+}
+
 function convertToCelsius() {
   const celsiusInput = document.getElementById('celsius').value;
   if (celsiusInput === '' || isNaN(celsiusInput)) {
