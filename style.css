@@ -1,42 +1,67 @@
-body {
-  font-family: Arial, sans-serif;
+.calculator {
+  width: 250px;
+  margin: 50px auto;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.input-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
+  align-items: flex-end;
 }
 
-.calculator {
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-input[type="number"] {
-  width: 100%;
+.display {
+  background-color: rgb(225, 233, 233);
   margin-bottom: 10px;
+  padding: 10px;
+  font-size: 18px;
+  text-align: right;
+  border: none;
+  border-radius: 5px;
+  width: 230px; 
+}
+
+.keys {
+  display: grid;
+  gap: 5px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
 }
 
 button {
-  width: 100%;
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
+  padding: 15px;
+  font-size: 18px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  background-color: #f0f0f0;
+  margin-bottom: 5px;
+  width: calc(100% / 3 - 5px); /* Alinear los botones de manera uniforme */
 }
 
-button:hover {
-  background-color: #45a049;
+button.operator {
+  padding: 10px; /* Reducir el padding para que el texto no se salga del botón */
+  font-size: 14px; /* Disminuir el tamaño de la fuente para ajustarlo mejor dentro del botón */
 }
 
-#temperatureResult,
-#distanceResult,
-#bmiResult {
-  margin-top: 10px;
+.operator {
+  background-color: #90a1da;
 }
 
+.result {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 20px;
+  text-align: right;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 226px; 
+}
